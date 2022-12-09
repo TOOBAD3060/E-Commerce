@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.nav .nav-menus {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.nav ul li a:hover{
+    color: gray;
+} 
+
+.nav .cart span{
+    position: relative;
+    left: -17px;    
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    z-index: 100;
+}

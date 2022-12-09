@@ -1,0 +1,15 @@
+.smart-band{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    background:radial-gradient(#fff,#ffd6d6);
+  }
+  .smart-band p{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0.5em 0 ;
+  }
+  .smart-band span{
+    color: gray;
+  }
