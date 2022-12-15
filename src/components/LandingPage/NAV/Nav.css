@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    /* background:radial-gradient(#fff,#ffd6d6); */
 }
 .nav .nav-menus {
     display: flex;
@@ -31,6 +31,9 @@
 .nav ul li a:hover{
     color: gray;
 } 
+.nav ul li a:active{
+    color: green;
+}
 
 .nav .cart span{
     position: relative;

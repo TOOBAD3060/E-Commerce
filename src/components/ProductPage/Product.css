@@ -1,0 +1,49 @@
+/* Category Styling */
+.btn-container{
+  margin: 2em 0 3em;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* width: 70vw; */
+}
+.btn-container button{
+  padding: 10px 20px;
+  color: #fff;
+  background:rgb(200, 0, 70);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-style: oblique
+}
+.btn-container button:hover{
+  background:radial-gradient(#fff,#ffd6d6) ;
+  color: black;
+}
+
+/* Menu styling */
+
+    .products-container {
+                margin: 0 100px 0 150px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                justify-items: center;
+      }
+      .products-container .each {
+        margin-bottom: 1.5em;
+      }
+      
+      .products-container .each .add-to-cart{
+        position: relative;
+        color: white;
+        top: -120px;
+        left: 5px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        padding: 7px 20px;
+        background-color: rgb(200, 0, 70);
+        
+      }
+

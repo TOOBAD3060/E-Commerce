@@ -6,7 +6,7 @@ const SmartBand = () => {
   return (
     <div className="smart-band">
           <div>
-           <a href='#e'> <img src={pics} width="200px" alt="smart" /> </a>
+            <img src={pics} width="200px" alt="smart" /> 
           </div>
           <div>
               <span>Exclusively Available on RedStore</span>
@@ -16,6 +16,7 @@ const SmartBand = () => {
                 <br /> 
                 full-touch display with adjustable brightness,so everything is clear as can be
               </span>
+              <div><a href='#e'>Buy now</a> </div>
           </div>
     </div>
   )

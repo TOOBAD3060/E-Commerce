@@ -2,25 +2,31 @@ import React from 'react'
 import logo from '../../../images/logo.png'
 import cart from '../../../images/cart.png'
 import './Nav.css'
-const Nav = () => {
+
+import {Link} from "react-router-dom"
+
+const Nav = ({showProduct,showAccount,showHome,showCart}) => {
+   
   return (
         <div className='nav'>
-            <div className='img'>
-              <a href='#c'>
+            <div className='img' onClick={showHome}>
+              <a href='#'>
               <img src={logo} alt='logo' width='120px'  />  
               </a>
-            </div>
+        </div>
+        
             <div className='nav-menus'>
                 <ul>
-                    <li><a href='#u'>Home</a> </li>
-                    <li><a href='#u'>Products</a> </li>
-                    <li><a href='#u'>About</a> </li>
-                    <li><a href='#u'>Contact</a> </li>
-                    <li><a href='#u'>Account</a> </li>
+                    <li onClick={showHome}><a href='#'> Home </a> </li>
+                    <li onClick={showProduct}><a href='#'>  Products </a> </li>
+                    <li><a href='#'>About</a> </li>
+                    <li><a href='#'>Contact</a> </li>
+                    <li onClick={showAccount}><a href='#'>Account</a> </li>
                 </ul>
-                <div className='cart'>
-                   <a href='#u'>
-                   <img src={cart} alt='cart' width='50px' />
+
+            <div className='cart'>
+                   <a href='#'>
+                   <img src={cart} onClick={showCart} alt='cart' width='50px' />
                     </a>  
                         <span>10</span>
                 </div>

@@ -1,51 +1,81 @@
-import DisplayProducts from "./LandingPage/DisplayProducts/DisplayProducts";
-import FirstSection from "./LandingPage/FirstSection/FirstSection";
+import { useState } from "react";
+import LandingPage from "./LandingPage/LandingPage";
+import ProductPage from "./ProductPage/ProductPage";
+import CartPage from "./CartPage/CartPage";
+import Account from "./ACCOUNT/Account";
 import Nav from "./LandingPage/NAV/Nav";
-import SmartBand from "./LandingPage/SmartBand/SmartBand";
-import pics from "../images/app-store.png"
+
+// import {createBrowserRouter,Route,RouterProvider,Link} from "react-router-dom"
+ 
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <LandingPage />
+//   },
+//   {
+//     path: "/account",
+//     element: <Account />
+//   },
+//   {
+//     path: "/cart",
+//     element: <CartPage />
+//   },
+//   {
+//     path: "/product",
+//     element: <ProductPage />
+//   }
+// ])
+
 function App() {
+  const [isShowPage,setIsShowPage] = useState({
+    home:true,
+    account: false,
+    product: false,
+    cart:false,
+  })
+  const [showNav,isShowNav ] = useState(true)
+
+  const showHome = () => {
+    setIsShowPage({
+          home:true,
+          account: false,
+          product: false,
+          cart:false,
+            })
+  }
+  const showProduct = () => {
+    setIsShowPage({
+      home:false,
+      account: false,
+      product: true,
+      cart:false,
+        })
+  }
+  const showAccount = () => {
+    setIsShowPage({
+      home:false,
+      account: true,
+      product: false,
+      cart:false,
+        })
+  }
+  const showCart = () => {
+    setIsShowPage({
+      home:false,
+      account: false,
+      product: false,
+      cart:true,
+        })
+  }
+  
+
   return (
     <div className="app">
-      <div className="nav-first_section">
-        <Nav />
-        <FirstSection />
-      </div>
-      <DisplayProducts />
-      <SmartBand />
-      <footer>
-        <article>
-          <h3>Download Our App</h3>
-          <p>Download App for Android and ios mobile phone</p>
-          <img src={pics} width="100px" alt="google" />
-          <img src={pics} width="100px" alt="apple" />
-        </article>
-
-        <article>
-        <img src={pics} width="100px" alt="apple" />
-        <p>Our purpose is To Sustainably Make the Pleasure 
-       <br />   and Benefits of Sports Accessible to the many</p>
-        </article>
-
-        <article>
-          <h3>Useful Links</h3>
-          <ul>
-            <li><a href="#r">Coupons</a> </li>
-            <li><a href="#r">Blog Post</a> </li>
-            <li><a href="#r">Return Policy</a> </li>
-            <li><a href="#r">Join Affiliate</a> </li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#r">Facebook</a> </li>
-            <li><a href="#r">Twitter</a> </li>
-            <li><a href="#r">Instagram</a> </li>
-            <li><a href="#r">YouTube</a> </li>
-          </ul>
-        </article>
-      </footer>
+       {showNav && <Nav showHome={showHome} showCart={showCart} showAccount={showAccount}  showProduct={showProduct}  />}
+       {isShowPage.home && <LandingPage />}
+       {isShowPage.account && <Account />}
+       {isShowPage.product && <ProductPage />}
+       {isShowPage.cart && <CartPage showProduct={showProduct} />}
     </div>
   );
 }

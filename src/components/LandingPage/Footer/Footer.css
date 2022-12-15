@@ -1,0 +1,31 @@
+footer.landing-page{
+    display: flex;
+    height: 250px;
+    justify-content:space-around ;
+    align-items: center;
+    background-color: black;
+    color: gray;
+  }
+  footer h3{
+    color: #fff;
+  }
+  footer h3.position {
+    position: relative;
+    left: -17px;
+    margin-bottom: 20px;
+  }
+  footer p{
+    margin: 20px 0;
+  }
+  footer article ul{
+    list-style: none;
+  }
+  footer article ul li a{
+    color: darkcyan;
+    text-decoration: none;
+    line-height: 30px;
+  }
+  footer img{
+    margin-right: 20px;
+    cursor: pointer;
+  }
