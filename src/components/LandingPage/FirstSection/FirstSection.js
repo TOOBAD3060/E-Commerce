@@ -12,7 +12,7 @@ const FirstSection = () => {
                 </p>
              <button> Explore Now </button>   
         </article>
-        <article>
+        <article id='display'>
             <img src={soccer} alt='soccer' width= '250px' />
         </article>
     </div>

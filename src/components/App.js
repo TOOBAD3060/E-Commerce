@@ -33,7 +33,7 @@ function App() {
     product: false,
     cart:false,
   })
-  const [showNav,isShowNav ] = useState(true)
+  // const [showNav,isShowNav ] = useState(true)
 
   const showHome = () => {
     setIsShowPage({
@@ -71,7 +71,7 @@ function App() {
 
   return (
     <div className="app">
-       {showNav && <Nav showHome={showHome} showCart={showCart} showAccount={showAccount}  showProduct={showProduct}  />}
+       <Nav showHome={showHome} showCart={showCart} showAccount={showAccount}  showProduct={showProduct}  />
        {isShowPage.home && <LandingPage />}
        {isShowPage.account && <Account />}
        {isShowPage.product && <ProductPage />}

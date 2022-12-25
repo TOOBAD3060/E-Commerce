@@ -25,3 +25,16 @@
     /* border: none; */
     text-decoration: none;
   }
+  @media (max-width:700px){
+    .smart-band{
+      display: grid;
+      align-content: center;
+      text-align: center;
+      height: 400px;
+      background:radial-gradient(#fff,#ffd6d6);
+    }
+    .smart-band img{
+      width: 80px;
+      /* height: 70px; */
+    }
+  }

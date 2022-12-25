@@ -45,7 +45,7 @@ const DisplayProducts = () => {
               })}
           </div>
 
-          <div className='products '>
+          <div className='products mobile-hidden'>
               {latestProducts2.map((eachProduct,index) =>{
                 const {img,price,rating,name} = eachProduct
                 return <div key={index} className='each'>

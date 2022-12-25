@@ -9,6 +9,7 @@ const initialState = {
     cart: [],
     total:0,
     amount:0,
+    currentCart:0,
 }
 
 
