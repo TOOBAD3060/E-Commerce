@@ -6,26 +6,38 @@ footer.landing-page{
     background-color: black;
     color: gray;
   }
-  footer h3{
+  footer.landing-page h3{
     color: #fff;
   }
-  footer h3.position {
+  footer.landing-page h3.position {
     position: relative;
     left: -17px;
     margin-bottom: 20px;
   }
-  footer p{
+  footer.landing-page p{
     margin: 20px 0;
   }
-  footer article ul{
+  footer.landing-page article ul{
     list-style: none;
   }
-  footer article ul li a{
+  footer.landing-page article ul li a{
     color: darkcyan;
     text-decoration: none;
     line-height: 30px;
   }
-  footer img{
+  footer.landing-page img{
     margin-right: 20px;
     cursor: pointer;
+  }
+  
+  @media (max-width:930px){
+    footer.landing-page .mobile-hidden{
+      display:none;
+    }
+  }
+
+  @media (min-width:700px){
+    footer.landing-page .tablet-show{
+      display:inline-block;
+    }
   }

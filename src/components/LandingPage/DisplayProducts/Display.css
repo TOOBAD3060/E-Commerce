@@ -36,14 +36,14 @@ h2::after{
 .each span{
     color: brown;
 }
-@media (max-width:700px){
+@media (max-width:790px){
     .products{
         display: grid;
         justify-content: space-around;
         /* grid-template-columns: 1fr; */
         gap: 30px;
     }
-    .mobile-hidden{
+    .products.mobile-hidden{
         display: none;
     }
 }
